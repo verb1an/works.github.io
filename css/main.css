@@ -290,9 +290,13 @@ a{
     color: #fff;
     z-index: 100;
     cursor: pointer;
+    padding: 0;
+}
+#myworks .controlls a span{
+    display: block;
 }
 #myworks .controlls a:last-child{
-    transform: translate(-50%, -50%) rotateZ(180deg);
+    transform: rotateZ(180deg);
 }
 
 #myworks .content{
@@ -315,7 +319,10 @@ a{
     width: 280px;
     min-width: 280px;
     overflow: hidden;
+    padding: 5px 0;
     margin-right: 20px;
+
+    box-shadow: 0 0 5px rgba(255, 255, 255, .1);
 }
 
 #myworks .content .item img{
@@ -396,5 +403,47 @@ a{
         left: -100px;
     }100%{
         left: 0;
+    }
+}
+
+@media (max-width: 1360px) {
+    .header{
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 769px) {
+    #myworks .content .item{
+        width: 240px;
+        min-width: 240px;
+    }
+    
+}
+
+@media (max-width: 506px) {
+    #myworks .section__inner{
+        padding: 0;
+    }
+    #myworks .content{
+        max-width: 300px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #myworks .content .item{
+        width: 300px;
+        min-width: 300px;
+        margin-right: 0;
+        margin-bottom: 20px;
+        height: calc(100vh - 125px);
+    }
+    #myworks .controlls{
+        display: none;
+    }
+}
+
+@media (max-width: 493px) {
+    .social a{
+        padding: 14px;
     }
 }
